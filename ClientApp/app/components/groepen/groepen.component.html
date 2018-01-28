@@ -1,0 +1,18 @@
+<h1>Groepen</h1>
+
+<p *ngIf="!groepen"><em>Loading...</em></p>
+
+<table class='table' *ngIf="groepen">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Naam</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let groep of groepen">
+            <td>{{ groep.id }}</td>
+            <td>{{ groep.naam }}</td>
+        </tr>
+    </tbody>
+</table>
